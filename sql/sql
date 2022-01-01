@@ -1,0 +1,16 @@
+-- Table: public.clientes
+
+-- DROP TABLE public.clientes;
+
+CREATE TABLE IF NOT EXISTS public.clientes
+(
+    id_cliente integer NOT NULL DEFAULT nextval('clientes_id_cliente_seq'::regclass),
+    nome character varying(100) COLLATE pg_catalog."default",
+    cpf character varying(20) COLLATE pg_catalog."default",
+    CONSTRAINT clientes_pkey PRIMARY KEY (id_cliente)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.clientes
+    OWNER to postgres
